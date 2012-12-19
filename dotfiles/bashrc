@@ -23,14 +23,18 @@ fi
 export INPUTRC=$HOME/.inputrc
 
 # set default editor to vim
-if [ -z `which vim` ]; then
+if [ -n `which vim` ]; then
 	alias vi='vim'
+	export EDITOR=vim
+	export VISUAL=vim
+	export GIT_EDITOR=vim
+	export SVN_EDITOR=vim
+else
+	export EDITOR=vi
+	export VISUAL=vi
+	export GIT_EDITOR=vi
+	export SVN_EDITOR=vi
 fi
-export EDITOR=vi
-export VISUAL=vi
-export GIT_EDITOR=vi
-export SVN_EDITOR=vi
-
 # set colors for ls
 OSNAME=`uname`
 if [ "$OSNAME" = "Linux" ]; then

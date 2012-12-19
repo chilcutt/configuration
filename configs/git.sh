@@ -6,7 +6,7 @@ git config --global user.email 'kyle@chilcutt.com'
 git config --global color.ui true
 git config --global push.default tracking
 git config --global core.whitespace space-before-tab,trailing-space
-git config --global core.editor vim
+git config --global core.editor `which vim`
 git config --global grep.lineNumber true
 git config --global core.pager 'less -r'
 
