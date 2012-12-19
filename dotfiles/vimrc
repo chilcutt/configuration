@@ -1,0 +1,41 @@
+" disable arrow keys
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+" 4 column hard tabs
+function! Tabs()
+	set tabstop=4
+	set shiftwidth=4
+	set softtabstop=4
+	set noexpandtab
+	match
+endfunction
+
+" 2 column soft tabs
+function! Spaces()
+	set tabstop=2
+	set shiftwidth=2
+	set softtabstop=2
+	set expandtab
+	call HighlightTabs()
+endfunction
+
+" highlight all tabs in red
+function! HighlightTabs()
+	autocmd ColorScheme * highlight AllTabs ctermbg=red guibg=red
+	highlight AllTabs ctermbg=red guibg=red
+	match AllTabs /\t/
+endfunction
+
+" map tabs and spaces to function keys
+map <F2> :call Tabs()<CR>
+map <F3> :call Spaces()<CR>
+
+" modify the listchars to highlight tabs
+set listchars=tab:>.,trail:.,extends:>,precedes:<
