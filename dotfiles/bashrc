@@ -64,7 +64,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # add /opt to the PATH
-export PATH=$PATH:/opt/bin:/opt/local/bin
+export PATH=$PATH:/opt/bin:/opt/local/bin:/opt/local/sbin
 
 # set up RVM if it's installed
 if [ -e $HOME/.rvm ]; then
