@@ -78,6 +78,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 [ -n `which gem` ] && alias remove_all_gems='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
+[ -n `which pkill` ] && alias logout_user='pkill -KILL -u'
 
 # add /opt to the PATH
 export PATH=$PATH:/opt/bin:/opt/local/bin:/opt/local/sbin
