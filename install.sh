@@ -1,11 +1,11 @@
 #!/bin/bash
 
-FILES='dotfiles/install.sh configs/install.sh'
+DIRS='dotfiles configs lib'
 
 pushd `dirname $0` > /dev/null
 SCRIPT_PATH=`pwd`
 popd > /dev/null
 
-for FILE in $FILES; do
-	$SCRIPT_PATH/$FILE
+for DIR in $DIRS; do
+	$SCRIPT_PATH/$DIR/install.sh
 done
