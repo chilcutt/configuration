@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES='bash_logout bash_profile bashrc inputrc vimrc.after'
+FILES='bash_logout bash_profile bashrc inputrc screenrc vimrc.after'
 
 pushd `dirname $0` > /dev/null
 SCRIPT_PATH=`pwd`
