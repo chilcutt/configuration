@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES='git.sh'
+FILES='rvm.sh git.sh'
 
 pushd `dirname $0` > /dev/null
 SCRIPT_PATH=`pwd`
