@@ -1,0 +1,2 @@
+rvm_path=/opt/rvm
+rvm_ignore_dotfiles_flag=1
