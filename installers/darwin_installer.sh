@@ -81,6 +81,11 @@ darwin_configure_git() {
   git config --global alias.fgrep 'grep --heading --break --ignore-case'
 }
 
+darwin_install_git_completion() {
+  sudo mkdir -p /opt/lib
+  sudo curl https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh -o /opt/lib/git-prompt.sh
+}
+
 darwin_install_janus_vim() {
   sudo port install vim macvim p5-app-ack ctags
   curl -Lo- https://bit.ly/janus-bootstrap | bash
@@ -112,6 +117,7 @@ darwin_installer() {
   darwin_install_bash
   darwin_install_git
   darwin_configure_git
+  darwin_install_git_completion
   darwin_install_janus_vim
   darwin_install_dotfiles
   darwin_install_rvm_ruby
