@@ -1,11 +1,11 @@
 #!/bin/bash
 
-DIRS='dotfiles configs lib'
+set -e
 
-pushd `dirname $0` > /dev/null
-SCRIPT_PATH=`pwd`
-popd > /dev/null
-
-for DIR in $DIRS; do
-	$SCRIPT_PATH/$DIR/install.sh
-done
+OS=`uname`
+if [ "$OS" == "Darwinx" ]; then
+  darwin_installer
+else
+  echo 'unsupported operating system'
+  exit 1
+fi
