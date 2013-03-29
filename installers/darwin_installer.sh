@@ -83,7 +83,7 @@ darwin_configure_git() {
 
 darwin_install_git_completion() {
   sudo mkdir -p /opt/lib
-  sudo curl https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh -o /opt/lib/git-prompt.sh
+  sudo curl https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh -o /opt/lib/git-prompt.sh
 }
 
 darwin_install_janus_vim() {
