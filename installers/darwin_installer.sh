@@ -98,7 +98,7 @@ darwin_install_dotfiles() {
 }
 
 darwin_install_rvm_ruby() {
-  curl -#L https://get.rvm.io | sudo bash -s stable --autolibs=3 --ignore-dotfiles --path /opt/rvm --ruby
+  curl -#L https://get.rvm.io | sudo bash -s stable --autolibs=3 --ignore-dotfiles --path /opt/local/rvm --ruby
   sudo dseditgroup -o edit -a kyle -t user rvm
   source /etc/profile.d/rvm.sh
 }
